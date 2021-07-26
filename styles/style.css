@@ -178,13 +178,14 @@ header {
     background-image: url("../img/bg-decor-1.png");
     background-position: 100% 30%;
     background-repeat: no-repeat;
-  }
+    overflow: hidden;
+}
+
 .category h2 {
     text-align: center;
 }
 
 .categories {
-    flex-wrap: wrap;
     align-items: center;
 }
 
@@ -264,6 +265,7 @@ header {
     background-repeat: no-repeat;
     background-position: 100% 100%;
 }
+
 .subscribe div {
     align-items: center;
     justify-content: center;
@@ -297,13 +299,15 @@ header {
 
 /* footer style */
 footer img {
-    width: 30%;
+    width: 100%;
 }
 
 .lined-footer {
+    padding: 40px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
 .lined-footer h3 {
@@ -322,4 +326,58 @@ footer img {
     font-size: 14px;
     text-align: center;
     margin-top: 80px;
+}
+
+@media screen and (max-width:1440px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .container {
+        width: 95%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width:879px) {
+    .nav-bar ul {
+        display: none;
+    }
+
+    .banner-section {
+        flex-direction: column-reverse;
+        margin-bottom: 50px;
+        align-items: flex-start;
+    }
+
+    .intro-text {
+        max-width: 90%;
+    }
+
+    .categories,
+    .destination {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+
+}
+
+@media screen and (max-width:600px) {
+    .subscribe p {
+        width: 100%;
+        font-size: 20px;
+        padding-bottom: 20px;
+    }
+
+    .inputs,
+    .lined-footer {
+        flex-direction: column;
+    }
+
+    .lined-footer h3 {
+        margin-top: 30px;
+    }
 }
